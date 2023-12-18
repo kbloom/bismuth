@@ -292,9 +292,11 @@ export class DriverWindowImpl implements DriverWindow {
 
   public toString(): string {
     // Using a shorthand name to keep debug message tidy
-    return `KWin(${this.client.windowId.toString(16)}.${
-      this.client.resourceClass
-    })`;
+    var windowIdString = 'undefined'
+    if (this.client.windowId) {
+      windowIdStirng = this.client.windowId.toString(16)
+    }
+    return `KWin(${windowIdString}.${this.client.resourceClass})`;
   }
 
   public visibleOn(surf: DriverSurface): boolean {
