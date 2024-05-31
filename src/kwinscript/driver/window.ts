@@ -294,7 +294,7 @@ export class DriverWindowImpl implements DriverWindow {
     // Using a shorthand name to keep debug message tidy
     var windowIdString = 'undefined'
     if (this.client.windowId) {
-      windowIdStirng = this.client.windowId.toString(16)
+      windowIdString = this.client.windowId.toString(16)
     }
     return `KWin(${windowIdString}.${this.client.resourceClass})`;
   }
